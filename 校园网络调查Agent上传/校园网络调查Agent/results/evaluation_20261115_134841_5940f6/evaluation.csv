@@ -1,0 +1,12 @@
+﻿run_id,case_id,group,repeat,model,status,predicted,expected,conclusion_match,required_tool_coverage,elapsed_seconds,human_task_success,human_evidence_complete,error
+20261115_134841_ff5df841,C01,A,1,deepseek-flash,error,,congestion,0,,4.703,,,引用了未实际取得的证据编号
+20261115_134846_9bd13eee,C01,B,1,deepseek-flash,error,,congestion,0,1.0,28.938,,,达到调查轮数上限，模型尚未提交有效结论；已保留工具记录，可重试。
+20261115_134916_f8b2e1de,C01,C,1,deepseek-flash,ok,congestion,congestion,1,1.0,8.39,,,
+20261115_134925_daea6541,C02,A,1,deepseek-flash,error,,path_change,0,,4.906,,,引用了未实际取得的证据编号
+20261115_134930_dfd6ab6d,C02,B,1,deepseek-flash,error,,path_change,0,1.0,28.25,,,达到调查轮数上限，模型尚未提交有效结论；已保留工具记录，可重试。
+20261115_134959_60e61e04,C02,C,1,deepseek-flash,error,,path_change,0,1.0,28.031,,,达到调查轮数上限，模型尚未提交有效结论；已保留工具记录，可重试。
+20261115_135027_a84ba221,C03,A,1,deepseek-flash,error,,rate_drop,0,,5.0,,,引用了未实际取得的证据编号
+20261115_135032_47df43eb,C03,B,1,deepseek-flash,error,,rate_drop,0,1.0,28.703,,,达到调查轮数上限，模型尚未提交有效结论；已保留工具记录，可重试。
+20261115_135102_7c18663c,C03,C,1,deepseek-flash,error,,rate_drop,0,1.0,31.625,,,达到调查轮数上限，模型尚未提交有效结论；已保留工具记录，可重试。
+20261115_135134_1a553ebe,C04,A,1,deepseek-flash,error,,device,0,,4.578,,,引用了未实际取得的证据编号
+20261115_135139_976805a1,C04,B,1,deepseek-flash,ok,device,device,1,1.0,8.969,,,

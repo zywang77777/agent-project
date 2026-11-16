@@ -1,0 +1,14 @@
+{
+  "protocol": "v1.1",
+  "model": "deepseek-flash",
+  "api_base": "https://api.deepseek.com",
+  "temperature": 0,
+  "timeout": 90,
+  "max_rounds": 8,
+  "max_tools": 16,
+  "group": "C",
+  "python": "3.12.2",
+  "case_sha256": "feabe16ab93bcaa7ce406678ef99c4cd82045a4e7f18a9e2996153eb8e0fa3e1",
+  "system_prompt_sha256": "8a8f97bb595693b7be2daec438f6baa440ee1c23387a098639b00528e3554ebe",
+  "seed": "API未指定随机种子"
+}
