@@ -1,0 +1,1272 @@
+[
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 65,
+          "utilization_pct": 95,
+          "queue_packets": 18,
+          "loss_pct": 1,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 950,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 65,
+      "wireless_rtt_ms": 68,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C01",
+    "title": "案例 01",
+    "symptom": "宿舍终端在20:00访问校园出口服务时，RTT由20ms升到65ms。请调查可能原因。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 80,
+          "utilization_pct": 32,
+          "queue_packets": 0.6,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚B",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L4",
+        "L3"
+      ],
+      "direction": "仅观测去程；反向路径未知",
+      "note": "新路径模拟增加固定传播/处理时延；该信息是可观测路径记录的一部分"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 20,
+      "wireless_rtt_ms": 23,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C02",
+    "title": "案例 02",
+    "symptom": "宿舍访问同一服务的RTT突然升高到80ms，但并非所有时段都慢。请调查。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 70,
+          "utilization_pct": 95,
+          "queue_packets": 17,
+          "loss_pct": 0,
+          "capacity_mbps": 4
+        },
+        "queue_model": {
+          "arrival_pps": 475,
+          "service_pps": 500,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 20,
+      "wireless_rtt_ms": 23,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C03",
+    "title": "案例 03",
+    "symptom": "晚间宿舍访问同一目的服务RTT升高，请检查链路与设备状态。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 90,
+          "utilization_pct": 28,
+          "queue_packets": 0.6,
+          "loss_pct": 8,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 1800,
+      "wired_rtt_ms": 90,
+      "wireless_rtt_ms": 92,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C04",
+    "title": "案例 04",
+    "symptom": "同一宿舍的有线和无线连接都出现卡顿和丢包，请调查原因。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 20,
+      "wireless_rtt_ms": 110,
+      "wireless_channel_busy_pct": 94,
+      "wifi_signal_dbm": -49,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C05",
+    "title": "案例 05",
+    "symptom": "宿舍无线访问时延明显升高，请结合可用记录调查，不预设原因。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 90,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": false,
+          "note": "混合业务，均值利用率高但未观测队列积压，不满足M/M/1前提"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 20,
+      "wireless_rtt_ms": 23,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C06",
+    "title": "案例 06",
+    "symptom": "有同学认为利用率达到90%就肯定拥塞，要求扩容。请核验这一判断。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 85,
+          "utilization_pct": null,
+          "queue_packets": null,
+          "loss_pct": null,
+          "capacity_mbps": null
+        },
+        "queue_model": null
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 85,
+          "utilization_pct": null,
+          "queue_packets": null,
+          "loss_pct": null,
+          "capacity_mbps": null
+        },
+        "queue_model": null
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 85,
+          "utilization_pct": null,
+          "queue_packets": null,
+          "loss_pct": null,
+          "capacity_mbps": null
+        },
+        "queue_model": null
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 85,
+          "utilization_pct": null,
+          "queue_packets": null,
+          "loss_pct": null,
+          "capacity_mbps": null
+        },
+        "queue_model": null
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": null,
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": null,
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": null,
+      "current_port_errors": null,
+      "wired_rtt_ms": null,
+      "wireless_rtt_ms": null,
+      "wireless_channel_busy_pct": null,
+      "wifi_signal_dbm": null,
+      "note": "采集失败，不能当作正常或零值"
+    },
+    "id": "C07",
+    "title": "案例 07",
+    "symptom": "宿舍用户报告访问慢，目前只采集到了RTT。请根据现有数据调查。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  },
+  {
+    "source": "人工构造的校园网模拟数据；时间窗口、端点相同，不含真实设备信息",
+    "topology": {
+      "nodes": [
+        "宿舍终端",
+        "接入交换机",
+        "汇聚A",
+        "汇聚B",
+        "校园出口"
+      ],
+      "links": [
+        {
+          "id": "L1",
+          "from": "接入交换机",
+          "to": "汇聚A"
+        },
+        {
+          "id": "L2",
+          "from": "汇聚A",
+          "to": "校园出口"
+        },
+        {
+          "id": "L3",
+          "from": "汇聚B",
+          "to": "校园出口"
+        },
+        {
+          "id": "L4",
+          "from": "接入交换机",
+          "to": "汇聚B"
+        }
+      ]
+    },
+    "links": {
+      "L1": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 120,
+          "utilization_pct": 100,
+          "queue_packets": 300,
+          "loss_pct": 5,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 1100,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "λ≥μ，不能计算有限稳态平均值"
+        }
+      },
+      "L2": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L3": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      },
+      "L4": {
+        "window": "同日 18:00 基线 / 20:00 异常，均为5分钟均值",
+        "baseline": {
+          "rtt_ms": 20,
+          "utilization_pct": 35,
+          "queue_packets": 0.5,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "current": {
+          "rtt_ms": 21,
+          "utilization_pct": 40,
+          "queue_packets": 0.7,
+          "loss_pct": 0,
+          "capacity_mbps": 8
+        },
+        "queue_model": {
+          "arrival_pps": 400,
+          "service_pps": 1000,
+          "assumptions_met": true,
+          "note": "仅模拟该链路单队列，平均包长1000字节"
+        }
+      }
+    },
+    "paths": {
+      "baseline": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "current": [
+        "接入交换机",
+        "汇聚A",
+        "校园出口"
+      ],
+      "baseline_links": [
+        "L1",
+        "L2"
+      ],
+      "current_links": [
+        "L1",
+        "L2"
+      ],
+      "direction": "仅观测去程；反向路径未知"
+    },
+    "access": {
+      "baseline_port_errors": 0,
+      "current_port_errors": 0,
+      "wired_rtt_ms": 20,
+      "wireless_rtt_ms": 23,
+      "wireless_channel_busy_pct": 25,
+      "wifi_signal_dbm": -48,
+      "note": "相同时间、地点与目的服务；错误数为5分钟计数"
+    },
+    "id": "C08",
+    "title": "案例 08",
+    "symptom": "网络高时延持续加重，请核验队列情况并说明理论模型能否使用。",
+    "description": "在模拟校园网中调查现象，原因由工具证据判断。"
+  }
+]

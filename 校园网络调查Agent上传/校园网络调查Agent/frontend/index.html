@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b1d"><title>校园网络调查 Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail" aria-label="项目导航">
+    <a class="brand" href="#top"><span class="brand-mark">N<span>•</span></span><span>NET / CAMPUS<small>网络调查工作台</small></span></a>
+    <div class="rail-label">WORKSPACE / 01</div>
+    <a class="nav-active" href="#investigate"><span>◫</span> 问题调查 <b>01</b></a>
+    <a href="#examples"><span>▤</span> 示例场景</a>
+    <a href="#result"><span>◎</span> 调查结果</a>
+    <div class="rail-bottom"><span class="status-dot"></span><span id="connection">正在连接服务</span><small>LOCAL DEMO · MVP</small></div>
+  </aside>
+  <main id="top">
+    <header class="topbar"><div>校园网络 / <strong>调查工作台</strong></div><div class="top-right"><span class="live-dot"></span> 本地演示环境 <span class="top-index">CN—01</span></div></header>
+    <section class="hero" id="investigate">
+      <div class="hero-copy"><div class="eyebrow"><span class="accent-line"></span> NETWORK INVESTIGATION / 01</div><h1>把网络问题，<br><em>变成调查线索。</em></h1><p>描述你在校园网络中遇到的现象。工作台将整理可能的方向、已有线索和下一步排查建议。</p><div class="hero-note"><span>↗</span> 从现象出发，逐步缩小问题范围</div></div>
+      <div class="signal-art" aria-hidden="true"><div class="signal-head"><span>INVESTIGATION SIGNAL</span><span>01 / 03</span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbit-core"><span>⌁</span><small>TRACE</small></div><i class="point p1"></i><i class="point p2"></i><i class="point p3"></i><div class="signal-foot"><span>OBSERVE</span><span>ANALYZE</span><span>VERIFY</span></div></div>
+    </section>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="input-title"><div class="section-top"><div><span class="section-number">01 / INPUT</span><h2 id="input-title">描述网络现象</h2></div><span class="tag">模拟数据 · 真实工具调用</span></div><p class="subtle">先选择案例数据，再输入需要调查的问题。自由描述不会自动产生真实网络测量。</p>
+        <details class="model-config"><summary>DeepSeek 模型设置 <span id="key-state">检查中</span></summary><form id="key-form"><label for="api-key">API Key（仅在服务内存中使用，重启后需重新输入）</label><input type="password" id="api-key" autocomplete="off" placeholder="sk-…"><button type="submit" class="minor-button">连接模型</button><p id="config-message" role="status"></p></form></details>
+        <label for="case-select">调查案例数据</label><select id="case-select"></select><label for="group-select">系统配置</label><select id="group-select"><option value="C">C · DeepSeek + 工具 + 专业 Skill（推荐）</option><option value="B">B · DeepSeek + 工具</option><option value="A">A · 直接 DeepSeek（读取相同原始数据）</option></select>
+        <form id="diagnose-form"><label for="symptom">问题描述 <span>必填</span></label><textarea id="symptom" name="symptom" maxlength="2000" placeholder="例如：宿舍 Wi-Fi 已连接，但网页一直打不开；手机和电脑都出现这个问题。" required></textarea><div class="form-meta"><span>请勿输入密码、账号等敏感信息</span><span><b id="count">0</b> / 2000</span></div><button class="submit" id="submit" type="submit"><span>生成调查建议</span><span>↗</span></button></form>
+        <div class="input-footer"><span>✳</span><p><strong>关于本次调查</strong><br>DeepSeek 选择工具，Python 执行查询和计算，Skill 约束调查方法。全部网络数据为人工模拟，结论只对案例条件成立。</p></div><div id="topology" class="topology" aria-label="模拟校园网拓扑"></div>
+      </section>
+      <section class="panel result-panel" id="result" aria-labelledby="result-title"><div class="section-top"><div><span class="section-number">02 / OUTPUT</span><h2 id="result-title">调查结果</h2></div><span class="result-status" id="result-status">等待输入</span></div><div id="result-content" aria-live="polite"><div class="empty"><div class="empty-icon">⌁</div><strong>等待一条网络现象</strong><p>提交描述后，这里会显示初步判断、线索与建议的排查步骤。</p><span>NO INVESTIGATION YET / 00</span></div></div></section>
+    </div>
+    <section class="panel trace-panel"><div class="section-top"><div><span class="section-number">03 / TRACE</span><h2>实际工具调用与调查进度</h2></div><span id="elapsed" class="tag">等待开始</span></div><p class="subtle">展开记录可查看工具输入与返回数据。这里展示可核验的操作记录，不展示模型内部思维。</p><div id="trace" role="log" aria-live="polite">尚未执行调查。</div></section>
+    <section class="examples" id="examples"><div class="example-heading"><div><span class="section-number">04 / CASES</span><h2>从示例场景开始</h2></div><p>八组独立模拟数据，包含误导线索与证据不足情况。</p></div><div id="case-list" class="case-grid"><p class="subtle">正在加载示例场景…</p></div></section>
+    <footer><span>NETWORK INVESTIGATION AGENT</span><span>校园网络调查 · 第一阶段 MVP</span><span>LOCAL / 01</span></footer>
+  </main>
+</div><script src="app.js" defer></script>
+</body></html>

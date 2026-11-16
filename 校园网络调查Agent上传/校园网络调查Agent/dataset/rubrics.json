@@ -1,0 +1,89 @@
+[
+  {
+    "case_id": "C01",
+    "expected_category": "congestion",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "calculate_queue_delay"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C02",
+    "expected_category": "path_change",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C03",
+    "expected_category": "rate_drop",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "calculate_queue_delay"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C04",
+    "expected_category": "device",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "inspect_access"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C05",
+    "expected_category": "wifi",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "inspect_access"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C06",
+    "expected_category": "normal",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "calculate_queue_delay"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C07",
+    "expected_category": "insufficient",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "inspect_access"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  },
+  {
+    "case_id": "C08",
+    "expected_category": "congestion",
+    "required_tools": [
+      "get_link_metrics",
+      "compare_paths",
+      "calculate_queue_delay"
+    ],
+    "basis": "人工指定场景生成条件，按多项观测联合判定；结论应限定在模拟条件下",
+    "review": "人工复核反证、结论强度、模型条件及是否编造数据"
+  }
+]
