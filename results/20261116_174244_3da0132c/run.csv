@@ -1,2 +1,0 @@
-﻿run_id,case_id,group,model,status,symptom,category,summary,elapsed_seconds,tool_calls,error
-20261116_174244_3da0132c,C01,C,deepseek-flash,ok,宿舍终端在20:00访问校园出口服务时，RTT由20ms升到65ms。请调查可能原因。,congestion,20:00 宿舍到校园出口的 RTT 由 20ms 升至 65ms，异常集中在 L1：利用率 35%→95%、队列 0.5→18 包、丢包 0%→1%，容量仍为 8Mbps；L2/L3/L4 指标基本不变（RTT 21ms、利用率 40%、队列 0.7 包、无丢包）。已观测去程路径与基线一致（接入交换机→汇聚A→校园出口，L1+L2），接入端口错误 0，有线 65ms 与无线 68ms 接近、无线信道忙 25%、信号 -48dBm。L1 单队列 M/M/1 在 ρ=0.95 下理论排队时延约 19ms、系统时延约 20ms，方向与观测一致，但不足以单独解释全部 +45ms 的端到端 RTT 增量。综合判断以 L1 链路拥塞（排队）为主要候选原因，强度中等。,22.828,8,

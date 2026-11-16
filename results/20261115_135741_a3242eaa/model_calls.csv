@@ -1,4 +1,0 @@
-﻿run_id,round,requested_model,resolved_model,seconds,prompt_tokens,completion_tokens,total_tokens
-20261115_135741_a3242eaa,1,deepseek-flash,deepseek-flash,1.391,1173,175,1348
-20261115_135741_a3242eaa,2,deepseek-flash,deepseek-flash,0.953,2519,172,2691
-20261115_135741_a3242eaa,3,deepseek-flash,deepseek-flash,6.687,2926,1127,4053
